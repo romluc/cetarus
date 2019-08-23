@@ -286,6 +286,11 @@ img.example-image {
 	list-style-type: none;
 }
 
+.rodapePrincipal-patrocinadores img {
+	width: 10vw;
+	justify-items: center;
+}
+
 /* ======= Bootstrap RWD Breakpoints ======= */
 
  /* Extra small devices (portrait phones, less than 576px) */
