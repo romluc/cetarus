@@ -208,7 +208,7 @@ h3.heading {
 /* ===== Profile Section =====  */
 
 .row.padding {
-	padding: 2rem 0 1rem;
+	padding-bottom: 1rem;
 }
 
 img.example-image {
@@ -291,12 +291,14 @@ img.example-image {
 }
 
 .rodapePrincipal-patrocinadores {
+	display: flex;
+	align-items: baseline;
 	list-style-type: none;
 }
 
 .rodapePrincipal-patrocinadores img {
-	width: 10vw;
-	justify-items: center;
+	min-width: 10vw;
+	justify-items: space-between;
 }
 
 /* ======= Bootstrap RWD Breakpoints ======= */
