@@ -207,8 +207,9 @@ h3.heading {
 
 /* ===== Profile Section =====  */
 
-.row.padding {
+.row.padding [class*='col-'] {
 	padding-bottom: 1rem;
+	justify-content: center;
 }
 
 img.example-image {
@@ -227,7 +228,7 @@ img.example-image {
 }
 
 .profile-item img {
-	max-width: 20vw;
+	max-width: 100%;
 	height: 20vh;
 	border-radius: 50%;
 	transition: transform 0.3s ease;
@@ -241,7 +242,7 @@ img.example-image {
 
 /* ===== Team (GALERIA) Section Fixed BG IMG Light =====  */
 #fixed-2 {
-	background-image: url('../img/team/team-bg.png');
+	background-image: url('../img/soundwave-header.png');
 	z-index: -1;
 }
 
@@ -301,6 +302,15 @@ img.example-image {
 	justify-items: space-between;
 }
 
+h5.modal-title {
+	text-align: center;
+}
+
+.img-modal {
+	object-fit: fill;
+	max-width: 100%;
+}
+
 /* ======= Bootstrap RWD Breakpoints ======= */
 
 /* Extra large devices (large desktops) */
@@ -356,29 +366,36 @@ img.example-image {
 	}
 
 	#fixed {
-		background-image: url('../img/fixed/apple.png');
+		background-image: url('../img/fixed/soundwave-header.png');
 	}
 
 	#fixed-2 {
-		background-image: url('../img/fixed/office.png');
+		background-image: url('../img/soundwave-header.png');
 	}
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
 	.caption h3 {
-		font-size: 1.5rem;
+		text-align: center;
+		font-size: 1.2rem;
 		padding-bottom: 1.2rem;
 	}
 
-	.row.no-padding {
-		display: flex;
-		flex-direction: column;
-		justify-items: center;
+	.heading {
+		text-align: center;
+	}
 
-		.profile-item {
-			width: 40vw;
-			height: auto;
-		}
+	.row.padding {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 1rem 1rem 1rem;
+	}
+
+	.profile-item img {
+		max-width: 70%;
+		height: auto;
+		border-radius: 50%;
+		transition: transform 0.3s ease;
 	}
 }
