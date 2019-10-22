@@ -69,7 +69,7 @@ body {
 /* ===== Landing Page ===== */
 
 .home-inner {
-	background-image: url(../img/pics/image.png);
+	background-image: url(../img/sam-cropped.png);
 }
 
 .caption {
@@ -114,40 +114,21 @@ body {
 	display: inline-block;
 }
 
-/* ===== Features section =====  */
-
-.narrow {
-	width: 75%;
-	margin: 0 auto;
-	padding-top: 2rem;
+/* ===== Team (GALERIA) Section Fixed BG IMG Light =====  */
+#fixed-2 {
+	background-image: url('../img/soundwave-header.png');
+	z-index: -1;
 }
 
-.btn-sm {
-	border-width: medium;
-	border-radius: 0;
-	padding: 0.5rem 1.1rem;
-	font-size: 0.9rem;
-	text-transform: uppercase;
-	margin: white;
+.light {
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 3rem 2rem 2rem;
+	z-index: 1000 !important;
 }
 
-.btn-turquoise {
-	border-color: #3990b5;
-	background-color: #3990b5;
-	color: white;
-}
-
-.btn-turquoise:hover,
-.btn-turquoise:focus {
-	border-color: #2d7390;
-	background-color: #2d7390;
-	color: white;
-}
-
-.jumbotron {
-	margin-bottom: 0;
-	border-radius: 0;
-	padding: 1rem 0 3rem;
+.row {
+	display: flex;
+	justify-content: center;
 }
 
 h3.heading {
@@ -165,25 +146,13 @@ h3.heading {
 	margin: 0 auto;
 }
 
-.feature {
-	text-align: center;
+.owl-dot.active span,
+.owl-dot:hover span {
+	background: var(--base-blue) !important;
 }
 
-.feature .fa-layers {
-	color: var(--base-blue);
-	height: 6rem;
-	margin: 0 auto;
-	width: 3.9rem;
-}
-
-.feature h3 {
-	font-size: 1.3rem;
-	text-transform: uppercase;
-	padding-bottom: 0.4rem;
-}
-
-.feature p {
-	font-size: 1.1rem;
+.owl-item {
+	height: auto;
 }
 
 /* ===== Fixed background img dark =====  */
@@ -210,6 +179,21 @@ h3.heading {
 .row.padding [class*='col-'] {
 	padding-bottom: 1rem;
 	justify-content: center;
+}
+
+h3.heading {
+	font-size: 1.9rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 1.9rem;
+}
+
+.heading-underline {
+	width: 3rem;
+	height: 0.2rem;
+	background-color: var(--base-blue);
+	margin: 0 auto;
 }
 
 img.example-image {
@@ -240,43 +224,7 @@ img.example-image {
 	cursor: pointer;
 }
 
-/* ===== Team (GALERIA) Section Fixed BG IMG Light =====  */
-#fixed-2 {
-	background-image: url('../img/soundwave-header.png');
-	z-index: -1;
-}
-
-.light {
-	background-color: rgba(255, 255, 255, 0.85);
-	padding: 3rem 2rem 2rem;
-	z-index: 1000 !important;
-}
-
-.card {
-	border-radius: 0;
-	border: 0.1rem solid rgba(0, 0, 0, 0.075);
-	box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.075);
-	margin: 0 1rem;
-	transition: transform 0.4s ease;
-}
-
-.card-img-top {
-	border-radius: 0;
-	width: 100%;
-	height: 15vw;
-	object-fit: cover;
-}
-
-.card:hover {
-	transform: scale(0.95);
-}
-
-.owl-dot.active span,
-.owl-dot:hover span {
-	background: var(--base-blue) !important;
-}
-
-/* ===== Skills Section =====  */
+/* ===== Numbers Section =====  */
 
 .skill h3 {
 	color: var(--base-blue);
@@ -291,6 +239,23 @@ img.example-image {
 	font-weight: 700;
 }
 
+/*  ==== Courses section ==== */
+#cursos .card-title {
+	display: flex;
+	justify-content: center;
+	min-width: 60%;
+}
+
+/* Modal */
+h5.modal-title {
+	text-align: center;
+}
+
+.img-modal {
+	object-fit: fill;
+	max-width: 100%;
+}
+
 .rodapePrincipal-patrocinadores {
 	display: flex;
 	align-items: baseline;
@@ -300,15 +265,6 @@ img.example-image {
 .rodapePrincipal-patrocinadores img {
 	min-width: 10vw;
 	justify-items: space-between;
-}
-
-h5.modal-title {
-	text-align: center;
-}
-
-.img-modal {
-	object-fit: fill;
-	max-width: 100%;
 }
 
 /* ======= Bootstrap RWD Breakpoints ======= */
@@ -371,6 +327,12 @@ h5.modal-title {
 
 	#fixed-2 {
 		background-image: url('../img/soundwave-header.png');
+	}
+
+	#cursos .card-title {
+		display: flex;
+		justify-content: center;
+		min-width: 60%;
 	}
 }
 
