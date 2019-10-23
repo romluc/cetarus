@@ -1,7 +1,7 @@
 /* ===== Mainheader Navbar transparent to solid =====  */
 $(document).ready(function() {
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 300) {
+		if ($(this).scrollTop() > 100) {
 			$('.main-header').addClass('solid');
 		} else {
 			$('.main-header').removeClass('solid');
