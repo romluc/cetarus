@@ -185,10 +185,10 @@ h3.heading {
 	background: url('../img/team-darkened.png') no-repeat center fixed;
 	background-size: cover;
 }
-.row.padding [class*='col-'] {
+/* .row.padding [class*='col-'] {
 	padding: 3rem 2rem 2rem;
 	justify-content: center;
-}
+} */
 
 h3.heading {
 	font-size: 1.9rem;
@@ -209,11 +209,11 @@ img.example-image {
 	max-width: 100%;
 }
 
-.row.no-padding [class*='col-'] {
+/* .row.no-padding [class*='col-'] {
 	display: flex;
 	padding: 0;
 	justify-items: center;
-}
+} */
 
 .profile-item {
 	overflow: hidden;
@@ -265,23 +265,42 @@ h5.modal-title {
 	max-width: 100%;
 }
 
-.rodapePrincipal-patrocinadores {
-	display: flex;
+/* Footer  */
+/* Sponsors section */
+.sponsors {
+	background-image: url('../img/soundwave-header.png');
+	z-index: -1;
+}
+
+.sponsors-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
 	align-items: baseline;
-	list-style-type: none;
+	justify-content: center;
 }
 
-.rodapePrincipal-patrocinadores img {
-	min-width: 10vw;
-	justify-items: space-between;
+.sponsors-item {
+	display: flex;
+	justify-content: center;
 }
 
+.sponsors-item .logo {
+	max-width: 20vw;
+	height: auto;
+}
+
+/* Lower section */
+.hr-footer {
+	width: 90vw;
+}
 .backToTop {
 	display: flex;
 	float: right;
-	margin-bottom: 1rem;
+	margin: 1rem 4vw 1rem 1rem;
 	background: var(--base-blue) none repeat scroll 0 0;
 	width: 2rem;
+	height: 2rem;
 	border-radius: 4px;
 	justify-content: center;
 	align-items: center;
@@ -367,11 +386,15 @@ h5.modal-title {
 		padding-bottom: 1.2rem;
 	}
 
-	.heading {
+	.heading h3 {
 		text-align: center;
 	}
 
-	.row.padding {
+	.heading-underline {
+		margin-bottom: 2rem;
+	}
+
+	.profile-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		padding: 1rem 1rem 1rem;
@@ -382,5 +405,17 @@ h5.modal-title {
 		height: auto;
 		border-radius: 50%;
 		transition: transform 0.3s ease;
+	}
+
+	/* sponsors section */
+	.sponsors-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 3rem;
+	}
+
+	.sponsors-item .logo {
+		max-width: 70%;
+		height: auto;
 	}
 }
