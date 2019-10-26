@@ -6,9 +6,6 @@
 }
 
 /*--- Fix for Fixed Navbar jumping on scroll --*/
-.fixed-top {
-	-webkit-backface-visibility: hidden;
-}
 
 /*--- Fixed Landing Page Section --*/
 .landing {

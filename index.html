@@ -25,12 +25,12 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="https://kit.fontawesome.com/7e77b9f671.js"></script>
-			<!-- The core Firebase JS SDK is always required and must be listed first -->
-			<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
 
-			<!-- TODO: Add SDKs for Firebase products that you want to use
-			 https://firebase.google.com/docs/web/setup#available-libraries -->
-			<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
 </head>
 
 <!-- Body with Scrollspy -->
@@ -66,7 +66,7 @@
 					<a class="nav-link" href="#contato">Contato</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="signed.html">Login</a>
+					<a class="nav-link btn btn-primary btn-sm" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -87,16 +87,16 @@
 	<!-- Start Landing Page Caption -->
 	<div class="caption center-block text-center">
 
-		<div class="os-animation" data-animation="bounceInUp" data-delay=".6s">
+		<div class="">
 			<h1>Cetarus</h1>
 		</div>
 
-		<div class="os-animation" data-animation="bounceInUp" data-delay=".8s">
+		<div class="">
 			<h3>Centro de Ensino e Treinamento em Anestesia Regional Guiada por Ultrassom</h3>
 			<h4>Ultrassom Point-of-Care</h4>
 		</div>
 
-		<div class="os-animation" data-animation="bounceInUp" data-delay="1s">
+		<div class="">
 			<a class="btn btn-outline-light btn-lg mr-4" href="#cursos">Cursos</a>
 		</div>
 
@@ -113,7 +113,7 @@
 	<!-- End Home Section -->
 
 	<!--- Start Gallery Section -->
-<div id="galeria" class="offset">
+<section id="galeria">
 
 	<!--- Start Fixed Background IMG Light -->
 	<div class="fixed-background">
@@ -163,7 +163,7 @@
 	</div>
 	<!--- End Fixed Background IMG Light -->
 
-</div>
+</section>
 <!--- End Gallery Section -->
 		
 	<!-- </div> End of Row Dark -->
@@ -179,7 +179,7 @@
 	<!-- End Features Section -->
 
 	<!-- Start Profile (team) Section -->
-<div class="profile fixed-background">
+<section class="profile fixed-background">
 	
 	<div class="row dark container-fluid">
 		<div class="col-12">
@@ -272,7 +272,7 @@
  		
 	</div> <!-- End Row -->
 		
-</div> <!-- End Fixed-background -->
+</section> <!-- End Fixed-background -->
 
 <!-- End Profiles Section -->
 
@@ -496,9 +496,9 @@
 
 
 	<!-- Footer -->
-	<footer class="fixed-background">
+	<footer class="">
 
-		<section class="sponsors">
+		<section class="sponsors fixed-background">
 			<div class="text-center">
 				<h3 class="heading">Nosso parceiros</h3>
 				<div class="heading-underline"></div>
@@ -531,35 +531,97 @@
 			</p>
 	</footer>
 
-		<!-- Modal -->
-
-			<section class="modal fade" id="siteModalConteudo" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-			
-						<div class="modal-header">
-							<h5 class="modal-title">Curso bloqueio por US básico</h5>
-							<button type="button" class="close" data-dismiss="modal">
-								<span>&times;</span>
-							</button>
-						</div>
-			
-						<div class="modal-body">
-
-							<div class="container row">
-								<img src="./img/pics/curso-out-19.jpeg" class="img-modal" alt="banner curso out/19">
-							</div>
-
-						</div>
-			
-						<div class="modal-footer">
-							<button type="button" class="btn btn-info" data-dismiss="modal">Lorem</button>
-						</div>
-			
-					</div>
+	<!-- Modals -->
+	<!-- Login Modal -->
+	<section class="modal fade" id="modalLogin" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<h5 class="modal-title">Área do aluno</h5>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
 				</div>
-			
-			</section>
+	
+				<div class="modal-body">
+
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Check me out</label>
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+	
+			</div>
+		</div>
+	
+	</section>
+
+	<section class="modal fade" id="siteModalConteudo" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<h5 class="modal-title">Curso bloqueio por US básico</h5>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+	
+				<div class="modal-body">
+
+					<div class="container row">
+						<img src="./img/pics/curso-out-19.jpeg" class="img-modal" alt="banner curso out/19">
+					</div>
+
+				</div>
+	
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" data-dismiss="modal">Lorem</button>
+				</div>
+	
+			</div>
+		</div>
+	
+	</section>
+	<!-- Footer End -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCIA1Ye7SPqXsmaGZdZPfm1ecJu7IqUagY",
+    authDomain: "cetarus-baas.firebaseapp.com",
+    databaseURL: "https://cetarus-baas.firebaseio.com",
+    projectId: "cetarus-baas",
+    storageBucket: "cetarus-baas.appspot.com",
+    messagingSenderId: "73670084882",
+    appId: "1:73670084882:web:0c04c3bb5deeddefe9cbcb",
+    measurementId: "G-691RCRTQTD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
 <!-- Script Source Files -->
 
