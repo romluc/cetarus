@@ -1,6 +1,8 @@
 :root {
+	--logo-blue: #0056b3;
 	--base-blue: #4b67b4;
-	--base-gray: #c0c0c0;
+	--base-gray: #ddd;
+	--base-green: #3990b5;
 }
 body {
 	font-family: 'Roboto', 'Open Sans', sans-serif;
@@ -53,12 +55,23 @@ body {
 .navbar-nav .nav-link {
 	color: var(--base-gray);
 	padding-top: 0.8rem;
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
 	color: #3990b5;
+	transition: 0.3s;
+}
+
+.nav-link.btn {
+	font-size: 1rem;
+	font-weight: bolder;
+}
+
+.nav-link.btn:hover {
+	color: #eee;
+	transition: 0.4s;
 }
 
 .main-header.solid {
@@ -69,7 +82,7 @@ body {
 /* ===== Landing Page ===== */
 
 .home-inner {
-	background-image: url(../img/sam-cropped.png);
+	background-image: url(../img/sam-darkened.png);
 }
 
 .caption {
@@ -105,13 +118,20 @@ body {
 	padding: 1rem;
 }
 
-.btn-lg {
+.call-action .btn-lg {
 	border-radius: 4px;
-	border: var(--base-gray) solid 0.3rem;
+	color: #ddd;
+	border: var(--base-gray) solid 0.2rem;
 	padding: 1.1rem;
-	font-weight: 400;
+	font-weight: bolder;
 	text-transform: uppercase;
 	display: inline-block;
+}
+
+.call-action .btn-lg:hover {
+	background-color: var(--base-gray);
+	color: var(--base-green);
+	transition: 0.5s;
 }
 
 /* ===== Galeria Section Fixed BG IMG Light =====  */

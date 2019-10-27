@@ -25,12 +25,6 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="https://kit.fontawesome.com/7e77b9f671.js"></script>
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
-
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-		https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
 </head>
 
 <!-- Body with Scrollspy -->
@@ -63,10 +57,13 @@
 					<a class="nav-link" href="#videos">Videos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#contato">Contato</a>
+					<a class="nav-link btn btn-outline-info" href="#" data-toggle="modal" data-target="#modalSignUp">Inscreva-se</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link btn btn-primary btn-sm" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
+					<a class="nav-link btn btn-outline-primary" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link btn btn-outline-danger" href="#" data-toggle="modal" data-target="#modalLogout">Logout</a>
 				</li>
 			</ul>
 		</div>
@@ -96,8 +93,8 @@
 			<h4>Ultrassom Point-of-Care</h4>
 		</div>
 
-		<div class="">
-			<a class="btn btn-outline-light btn-lg mr-4" href="#cursos">Cursos</a>
+		<div class="call-action">
+			<a class="btn btn-outline-info btn-lg mr-4" href="#cursos">Cursos</a>
 		</div>
 
 	</div>
@@ -446,7 +443,7 @@
 						
 								<div class="col-sm-6">
 									<div class="embed-responsive embed-responsive-16by9">
-										<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7YvdeuKadgw?list=RDHFKm7eDc3w4" allowfullscreen></iframe>
+										<iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
 									</div>
 								</div>
 				
@@ -468,7 +465,7 @@
 						
 								<div class="col-sm-6">
 									<div class="embed-responsive embed-responsive-16by9">
-										<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wB9vBzMO6QM?list=RDHFKm7eDc3w4" allowfullscreen></iframe>
+										<iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
 									</div>
 								</div>
 						
@@ -532,6 +529,37 @@
 	</footer>
 
 	<!-- Modals -->
+	<!-- Sign Up Modal  -->
+	<section class="modal fade" id="modalSignUp" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<h5 class="modal-title">Inscreva-se</h5>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+	
+				<div class="modal-body">
+
+					<form id="signup-form">
+						<div class="form-group">
+							<label for="signup-email">Email address</label>
+							<input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+							<label for="signup-password">Password</label>
+							<input type="password" class="form-control" id="signup-password" placeholder="Password">
+						</div>
+						<button class="btn btn-primary">Cadastrar</button>
+					</form>
+	
+			</div>
+		</div>
+	
+	</section>
 	<!-- Login Modal -->
 	<section class="modal fade" id="modalLogin" tabindex="-1" role="dialog">
 		<div class="modal-dialog modal-lg" role="document">
@@ -567,6 +595,27 @@
 		</div>
 	
 	</section>
+
+		<!-- Logout Modal -->
+		<section class="modal fade" id="modalLogout" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+		
+					<div class="modal-header">
+						<h5 class="modal-title">Área do aluno</h5>
+						<button type="button" class="close" data-dismiss="modal">
+							<span>&times;</span>
+						</button>
+					</div>
+		
+					<div class="modal-body">
+	
+						<h1>Logout efetuado</h1>
+		
+				</div>
+			</div>
+		
+		</section>
 
 	<section class="modal fade" id="siteModalConteudo" tabindex="-1" role="dialog">
 		<div class="modal-dialog modal-lg" role="document">
@@ -605,24 +654,6 @@
 <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
 
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCIA1Ye7SPqXsmaGZdZPfm1ecJu7IqUagY",
-    authDomain: "cetarus-baas.firebaseapp.com",
-    databaseURL: "https://cetarus-baas.firebaseio.com",
-    projectId: "cetarus-baas",
-    storageBucket: "cetarus-baas.appspot.com",
-    messagingSenderId: "73670084882",
-    appId: "1:73670084882:web:0c04c3bb5deeddefe9cbcb",
-    measurementId: "G-691RCRTQTD"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-
 <!-- Script Source Files -->
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -639,9 +670,9 @@
 <script src="js/lightbox.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/validator.js"></script>
-<script src="js/waypoints.js"></script>
 
 <script src="js/app.js"></script>
+<script src="js/auth.js"></script>
 <!-- End of Source Files -->
 
 <script>
