@@ -1,13 +1,4 @@
 // Sign Up
-// const signupForm = document.querySelector('#signup-form');
-// signupForm.addEventListener('submit', e => {
-// 	e.preventDefault();
-
-// 	const email = signupForm['signup-email'].value;
-// 	const password = signupForm['signup-password'].value;
-
-// 	console.log(email, password);
-// });
 $('#signup-form').submit(function(e) {
 	e.preventDefault();
 
@@ -29,6 +20,44 @@ $('#signup-form').submit(function(e) {
 			const errorMessage = error.message;
 			if (errorCode == 'auth/weak-password') {
 				alert('The password is too weak.');
+			} else {
+				alert(errorMessage);
+			}
+			console.log(error);
+		});
+});
+
+// Logout
+const logout = $('a.logout');
+logout.click(e => {
+	e.preventDefault();
+	auth.signOut().then(() => {
+		console.log('User signed out');
+	});
+});
+
+// Login
+$('#login-form').submit(function(e) {
+	e.preventDefault();
+
+	const loginForm = $(this);
+
+	const email = loginForm.find('#login-email').val();
+	const password = loginForm.find('#login-password').val();
+
+	auth
+		.signInWithEmailAndPassword(email, password)
+		.then(cred => {
+			console.log(cred.user);
+			$('#modalLogin').modal('toggle');
+			document.querySelector('#login-form').reset();
+		})
+		.catch(function(error) {
+			// Handle Errors here.
+			var errorCode = error.code;
+			var errorMessage = error.message;
+			if (errorCode === 'auth/wrong-password') {
+				alert('Wrong password.');
 			} else {
 				alert(errorMessage);
 			}
