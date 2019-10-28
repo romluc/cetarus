@@ -5,7 +5,6 @@ auth.onAuthStateChanged(user => {
 			.get()
 			.then(snapshot => {
 				setupContent(snapshot.docs);
-				window.location.assign('auth.html');
 			});
 	} else {
 		setupContent([]);

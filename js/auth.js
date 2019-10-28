@@ -1,3 +1,16 @@
+// Listening for auth status changes
+auth.onAuthStateChanged(user => {
+	if (user) {
+		db.collection('aluno')
+			.get()
+			.then(snapshot => {
+				setupContent(snapshot.docs);
+			});
+	} else {
+		setupContent([]);
+	}
+});
+
 // Sign Up
 $('#signup-form').submit(function(e) {
 	e.preventDefault();
@@ -32,7 +45,10 @@ const logout = $('a.logout');
 logout.click(e => {
 	e.preventDefault();
 	auth.signOut().then(() => {
-		// $('#modalLogout').modal('toggle');
+		setTimeout(function() {
+			$('#modalLogout').modal('toggle');
+		}, 1000);
+
 		window.location.assign('index.html');
 	});
 });
@@ -52,6 +68,7 @@ $('#login-form').submit(function(e) {
 			console.log(cred.user);
 			$('#modalLogin').modal('toggle');
 			document.querySelector('#login-form').reset();
+			window.location.assign('auth.html');
 		})
 		.catch(function(error) {
 			// Handle Errors here.
