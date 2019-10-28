@@ -279,7 +279,7 @@
 <div class="jumbotron">
 <div class="narrow">
 
-	<div class="col-12 os-animation" data-animation="fadeInUp">
+	<div>
 		<h3 class="heading">Números</h3>
 		<div class="heading-underline"></div>
 	</div>
@@ -340,8 +340,14 @@
 
 		<!-- Cards de exemplos de cursos -->
 		<section id="cursos" class="container">
+				<div>
+						<h3 class="heading">Cursos</h3>
+						<div class="heading-underline"></div>
+					</div>
 		
-			<div class="row justify-content-sm-center">
+			<div class="row justify-content-lg-center text-center">
+				<h3 class="cursos-descricao my-3">O Cetarus oferece três modelos de cursos ao longo do ano</h3>
+				<h4>Fique atento para as inscrições aqui no site e através dos nossos parceiros</h4>
 
 				<!-- card 1 -->
 				<div class="col-12">
@@ -369,6 +375,60 @@
 
 					</div>
 
+					<!-- card 2 -->
+				<div class="col-sm-4">
+
+						<div class="card mb-5" style="width: 60rem;">
+	
+								<img class="card-img-top pocus-img" src="./img/pics/jocan2019/" alt="imagem do card 1">
+								<div class="card-body">	
+									<h4 class="card-title">BLOQUEIOS GUIADOS POR US (AVANÇADO) - MMII E MMSS</h4>
+									<h6 class="card-subtitle mb-2 text-muted">Próxima turma: 04 e 05 de outubro de 2019</h6>
+								</div>
+								
+								<!-- listgroup do card1 -->
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Fusce vulputate justo</li>
+									<li class="list-group-item">Ut semper accumsan</li>
+									<li class="list-group-item">Morbi ligula augue</li>
+								</ul>
+	
+								<div class="card-body">
+								
+										<!-- LINKAR para um modal de conteudo completo -->
+										<a href="#" class="card-link" data-toggle="modal" data-target="#siteModalConteudo">Conteúdo completo</a>
+								</div>
+	
+						</div>
+
+						<!-- card 3 -->
+				<div class="col-sm-4">
+
+						<div class="card mb-5" style="width: 60rem;">
+	
+								<img class="card-img-top pocus-img" src="./img/pics/jocan2019/" alt="imagem do card 1">
+								<div class="card-body">	
+									<h4 class="card-title">POCUS - POINT-OF-CARE ULTRASOUND</h4>
+									<h6 class="card-subtitle mb-2 text-muted">Próxima turma: 04 e 05 de outubro de 2019</h6>
+								</div>
+								
+								<!-- listgroup do card1 -->
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Fusce vulputate justo</li>
+									<li class="list-group-item">Ut semper accumsan</li>
+									<li class="list-group-item">Morbi ligula augue</li>
+								</ul>
+	
+								<div class="card-body">
+								
+										<!-- LINKAR para um modal de conteudo completo -->
+										<a href="#" class="card-link" data-toggle="modal" data-target="#siteModalConteudo">Conteúdo completo</a>
+								</div>
+	
+						</div>
+	
+	
+
 				</div>
 
 		</section>
@@ -381,7 +441,7 @@
 			<div class="row">
 				<div class="col-12 text-center">
 					<h1 class="display-4"><i class="far fa-video fa-xs text-info mr-3"></i>Top videos</h1>
-					<p class="lead">Nulla facilisi. In nec auctor neque. Donec augue turpis, mattis id elementum quis, auctor et erat.</p>
+					<p class="lead">Confira nossos vídeos semanais</p>
 					<hr>
 				</div>
 			</div>
@@ -523,9 +583,19 @@
 				
 			<hr class="hr-footer">
 			<p>
-				<a class="backToTop" href="#"><i class="fa fa-2x fa-chevron-up"></i></a>
+				<a class="backToTop" href="#home"><i class="fa fa-2x fa-chevron-up"></i></a>
 			</p>
 	</footer>
+
+	<!-- Area do aluno -->
+
+	<div class="container-fluid">
+			<div class="row aluno">
+				<ul>
+					
+				</ul>
+			</div>
+	</div>
 
 	<!-- Modals -->
 	<!-- Sign Up Modal  -->
@@ -583,10 +653,10 @@
 							<label for="login-password">Password</label>
 							<input type="password" class="form-control" id="login-password" placeholder="Password">
 						</div>
-						<div class="form-group form-check">
+						<!-- <div class="form-group form-check">
 							<input type="checkbox" class="form-check-input" id="exampleCheck1">
 							<label class="form-check-label" for="exampleCheck1">Check me out</label>
-						</div>
+						</div> -->
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 	
@@ -643,6 +713,7 @@
 	</section>
 	<!-- Footer End -->
 
+
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
 
@@ -670,6 +741,7 @@
 
 <script src="js/app.js"></script>
 <script src="js/auth.js"></script>
+<script src="js/index.js"></script>
 <!-- End of Source Files -->
 
 <script>

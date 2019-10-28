@@ -1,9 +1,17 @@
+// Get date from Firestore
+
 // Listening for auth status changes
 auth.onAuthStateChanged(user => {
 	if (user) {
-		// User is signed in.
+		db.collection('aluno')
+			.get()
+			.then(snapshot => {
+				setupContent(snapshot.docs);
+				window.location.assign('auth.html');
+			});
 	} else {
-		// No user is signed in.
+		setupContent([]);
+		// window.location.assign('index.html');
 	}
 });
 
@@ -41,10 +49,8 @@ const logout = $('a.logout');
 logout.click(e => {
 	e.preventDefault();
 	auth.signOut().then(() => {
-		console.log(currentUser);
-		if (currentUser) {
-			$('#modalLogout').modal('toggle');
-		}
+		// $('#modalLogout').modal('toggle');
+		window.location.assign('index.html');
 	});
 });
 
