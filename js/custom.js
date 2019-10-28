@@ -9,6 +9,17 @@ $(document).ready(function() {
 	});
 });
 
+/* ===== Darken header if navbar collapse =====  */
+$(document).ready(function() {
+	$('.navbar-toggler').on('click', function() {
+		$('.main-header').addClass('solid');
+		const closed = $('.navbar-collapse').hasClass('show');
+		if (closed === true) {
+			$('.main-header').removeClass('solid');
+		}
+	});
+});
+
 /* ===== Close mobile nav on click =====  */
 $(document).ready(function() {
 	$(document).click(function(event) {

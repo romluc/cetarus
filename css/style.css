@@ -35,6 +35,12 @@ body {
 	max-height: 8.5rem; /* to adjust smoothly even in xl viewports ?*/
 }
 
+.navbar-collapse.show {
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: 0.2s ease-in;
+	padding: 0.5rem;
+}
+
 .navbar-brand img {
 	height: 3.5rem;
 }

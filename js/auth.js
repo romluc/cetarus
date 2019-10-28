@@ -1,3 +1,12 @@
+// Listening for auth status changes
+auth.onAuthStateChanged(user => {
+	if (user) {
+		// User is signed in.
+	} else {
+		// No user is signed in.
+	}
+});
+
 // Sign Up
 $('#signup-form').submit(function(e) {
 	e.preventDefault();
@@ -32,7 +41,10 @@ const logout = $('a.logout');
 logout.click(e => {
 	e.preventDefault();
 	auth.signOut().then(() => {
-		console.log('User signed out');
+		console.log(currentUser);
+		if (currentUser) {
+			$('#modalLogout').modal('toggle');
+		}
 	});
 });
 
