@@ -49,7 +49,7 @@ logout.click(e => {
 	auth.signOut().then(() => {
 		setTimeout(function() {
 			$('#modalLogout').modal('toggle');
-		}, 1000);
+		}, 300);
 	});
 });
 

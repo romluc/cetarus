@@ -88,13 +88,14 @@ body {
 .jumbotron.private {
 	margin-top: 4.2rem;
 	padding-top: 2rem;
-	height: 80vh;
+	height: 85vh;
+	background-image: url('../img/soundwave-header.png');
 }
 
 .jumbotron.inner-jumbotron {
-	height: 60vh;
-	margin: 1rem;
-	padding: 2rem;
+	height: 80vh;
+	margin: 0.5rem;
+	padding: 0.5rem;
 	background-color: #ddd;
 }
 
