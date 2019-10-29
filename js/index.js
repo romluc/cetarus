@@ -29,9 +29,10 @@ const setupContent = data => {
 		data.forEach(doc => {
 			const content = doc.data();
 			const asdf = `
-        <li>
-          ${content.title}
-        </li>
+        <li style="list-style: none;" class="ml-5">
+					${content.title}
+					</li>
+					<a href="pdf/curso de bloqueio.pdf">
       `;
 
 			html += asdf;

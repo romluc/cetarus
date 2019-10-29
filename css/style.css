@@ -86,7 +86,16 @@ body {
 }
 
 .jumbotron.private {
-	margin-top: 5rem;
+	margin-top: 4.2rem;
+	padding-top: 2rem;
+	height: 80vh;
+}
+
+.jumbotron.inner-jumbotron {
+	height: 60vh;
+	margin: 1rem;
+	padding: 2rem;
+	background-color: #ddd;
 }
 
 /* ===== Landing Page ===== */
