@@ -1,4 +1,25 @@
+const loggedOutLinks = $('li.logged-out');
+const loggedInLinks = $('li.logged-in');
+const loggedInDivs = $('div.login');
+const privateSection = $('.private');
+
 const contentList = $('div.aluno > ul');
+
+const setupUI = user => {
+	if (user) {
+		loggedInLinks.filter('.logged-in').show();
+		loggedOutLinks.filter('.logged-out').hide();
+		loggedInDivs.hide();
+
+		privateSection.show();
+	} else {
+		loggedInLinks.filter('.logged-in').hide();
+		loggedOutLinks.filter('.logged-out').show();
+		loggedInDivs.show();
+
+		privateSection.hide();
+	}
+};
 
 // setup content
 const setupContent = data => {

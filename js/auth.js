@@ -5,8 +5,10 @@ auth.onAuthStateChanged(user => {
 			.get()
 			.then(snapshot => {
 				setupContent(snapshot.docs);
+				setupUI(user);
 			});
 	} else {
+		setupUI();
 		setupContent([]);
 	}
 });
@@ -48,8 +50,6 @@ logout.click(e => {
 		setTimeout(function() {
 			$('#modalLogout').modal('toggle');
 		}, 1000);
-
-		window.location.assign('index.html');
 	});
 });
 
@@ -68,7 +68,6 @@ $('#login-form').submit(function(e) {
 			console.log(cred.user);
 			$('#modalLogin').modal('toggle');
 			document.querySelector('#login-form').reset();
-			window.location.assign('auth.html');
 		})
 		.catch(function(error) {
 			// Handle Errors here.

@@ -30,58 +30,71 @@
 <!-- Body with Scrollspy -->
 <body data-spy="scroll" data-target="#navbarResponsive" class="scrollspy-site" class="scrollspy-site">
 
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg fixed-top main-header py-0">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#home"><img class="logo" src="img\logos\cetarus-logo-thal.png"></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-				<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
-			</button>
-	
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#home">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#galeria">Galeria</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#cursos">Cursos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#videos">Videos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link btn btn-outline-info" href="#" data-toggle="modal" data-target="#modalSignUp">Inscreva-se</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link btn btn-outline-primary" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
-					</li>
-					<!-- <li class="nav-item">
-						<a class="nav-link btn btn-outline-danger logout" href="#">Logout</a>
-					</li> -->
-				</ul>
+	<!-- Start Home Section -->
+	<div id="home">
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg fixed-top main-header py-0">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#home"><img class="logo" src="img\logos\cetarus-logo-thal.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item logged-out" style='display: none;'>
+								<a class="nav-link" href="#home">Home</a>
+							</li>
+							<li class="nav-item logged-out" style='display: none;'>
+									<a class="nav-link" href="#galeria">Galeria</a>
+								</li>
+								<li class="nav-item logged-out" style='display: none;'>
+										<a class="nav-link" href="#cursos">Cursos</a>
+									</li>
+									<li class="nav-item logged-out" style='display: none;'>
+							<a class="nav-link" href="#videos">Videos</a>
+						</li>
+						<li class="nav-item logged-out" style='display: none;'>
+								<a class="nav-link btn btn-outline-info" href="#" data-toggle="modal" data-target="#modalSignUp">Inscreva-se</a>
+						</li>
+						<li class="nav-item logged-out" style='display: none;'>
+								<a class="nav-link btn btn-outline-primary" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
+							</li>
+						<li class="nav-item logged-in" style='display: none;'>
+								<a class="nav-link btn btn-outline-danger logout" href="#">Logout</a>
+							</li>
+					</ul>
+				</div>
+				
 			</div>
-		
-		</div>
 		</nav>
 		<!-- End Navigation  -->
-	
-<!-- Start Home Section -->
-<div id="home">
+
+		<!-- Inicio area do aluno (Private Section) -->
+		<section class="jumbotron jumbotron-fluid private">
+			<div class="aluno">
+				<h1 class="text-center">Área do aluno</h1>
+				<ul>
+					
+				</ul>
+			</div>
+		</section>
 		
-	<!-- Start Landing Page Image -->
-	<div class="landing">
-		<div class="home-wrap">
-			<div class="home-inner">
+		<!-- Start login/logout -->
+		<div class="login">
+		
+			
+		<!-- Start Landing Page Image -->
+		<div class="landing">
+			<div class="home-wrap">
+				<div class="home-inner">
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Landing Page Image -->
-
-	<!-- Start Landing Page Caption -->
-	<div class="caption center-block text-center">
+		<!-- End Landing Page Image -->
+		
+		<!-- Start Landing Page Caption -->
+		<div class="caption center-block text-center">
 
 		<div class="">
 			<h1>Cetarus</h1>
@@ -105,7 +118,7 @@
 				<i class="fas fa-angle-down" aria-hidden="true"></i>
 			</div>
 		</a>
-	</div>
+	
 	<!-- End Home Section -->
 
 	<!--- Start Gallery Section -->
@@ -334,6 +347,7 @@
 
 
 </div>
+</div>
 <!-- End skills section -->
 
 		
@@ -541,25 +555,27 @@
 						</div>
 
 					</div>
-
+					
 				</div>
-
+				
 			</div>
-
+			
 		</div>
-	<!-- Fim da section do Jumbotron -->
+		<!-- Fim da section do Jumbotron -->
 	</section> 
-
-
+	
+	<!-- End login/logout div -->
+</div>
+	
 	<!-- Footer -->
 	<footer class="">
-
+		
 		<section class="sponsors fixed-background">
 			<div class="text-center">
 				<h3 class="heading">Nosso parceiros</h3>
 				<div class="heading-underline"></div>
 			</div>
-				<div class="sponsors-grid container">
+			<div class="sponsors-grid container">
 					<div class="sponsors-item">
 						<a class="" href="#">
 							<img class="logo" src="img/logos/coopanest-logo.png" alt="Logo da Coopanest">
@@ -576,9 +592,9 @@
 						</a>
 					</div> -->
 				</div>
-		</section>
+			</section>
 	</footer>
-
+	
 	<footer class="footer">
 				
 			<hr class="hr-footer">
@@ -586,7 +602,6 @@
 				<a class="backToTop" href="#home"><i class="fa fa-2x fa-chevron-up"></i></a>
 			</p>
 	</footer>
-
 	<!-- Modals -->
 	<!-- Sign Up Modal  -->
 	<section class="modal fade" id="modalSignUp" tabindex="-1" role="dialog">

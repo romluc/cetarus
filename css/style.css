@@ -85,6 +85,10 @@ body {
 	transition: background-color 1s ease 0s;
 }
 
+.jumbotron.private {
+	margin-top: 5rem;
+}
+
 /* ===== Landing Page ===== */
 
 .home-inner {
